@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <!-- https://github.com/jjdelc/sturdy-waddle -->
   <head>
     <meta charset="utf-8">
     <title>Neutralidad de la red</title>
@@ -7,7 +8,21 @@
 body, html {
   margin: 0;
   padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 4vh;
+  color: #222;
   scroll-behavior: smooth;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+h1 {
+    font-size: 6vh;
+}
+h2 {
+    font-size: 4vh;
+}
+a {
+  color: #225;
 }
 .slides {
   display: flex;
@@ -15,24 +30,140 @@ body, html {
 }
 .slide {
   height: 100vh;
-  posiition: relative;
+  position: relative;
+  padding: 0 15%;
 }
-    </style>
+#slide-1, #slide-2, #slide-5, #slide-12, #slide-13, #slide-14 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#slide-5 img {
+  top: 15%;
+  left: 25%;
+  position: absolute;
+  opacity: 0.5;
+}
+#slide-6 {
+  background: url(t800.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+#slide-7 {
+  background: url(ajit.webp) no-repeat center center fixed;
+  background-size: cover;
+}
+#slide-8 {
+  background: url(bridge.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+#t1 {top: 50%; left: 3%; position: absolute;}
+#t2 {top: 15%; left: 25%; position: absolute;}
+#t3 {top: 25%; left: 52%; position: absolute;}
+#t4 {top: 10%; left: 80%; position: absolute;}
+#slide-11 table {
+  margin-top: 25%;
+  border: 3px solid #222;
+  background: rgba(255, 255, 255, 0.25);
+}
+#slide-11 td {
+  padding: 1rem;
+}
+</style>
   </head>
   <body>
     <main class="slides">
     <article id="slide-1" class="slide">
       <h1>Neutralidad de la red</<h1>
+      <h2>Y por qué es importante</h2>
     </article>
-      <article id="slide-2"class="slide">
-        <h1>https://www.isgeek.net</h1>
-      </article>
-      <article id="slide-3"class="slide">
-        <h1>Jjdelc</h1>
-      </article>
-      <article id="slide-4"class="slide">
-        <h1>Historia</h1>
-      </article>
+    <article id="slide-2"class="slide">
+      <h1>Soy Jj</h1>
+      <h2><a href="https://www.isgeek.net">https://www.isgeek.net</a></h2>
+    </article>
+    <article id="slide-3"class="slide">
+      <h1>Algunos escenarios</h1>
+      <ul>
+        <li>Correo postal</li>
+        <li>Viajes en avion</li>
+      </ul>
+    </article>
+    <article id="slide-4"class="slide">
+      <h1>Neutralidad en la red</h1>
+        <p>Se comenzó a ver en el control de P2P sharing.</p>
+        <p>Netflix, Youtube, Spotify<br/>Consumo de la capacidad de ancho de banda</p>
+        <p>Cableado priorizado por servicios: <br/>Telemedicina vs Cat videos</p>
+        <p>Potenciales cobros adicionales por consumo de Netflix, los ISPs dijeron que no lo harían</p>
+        <p>Pero el diablo es sabio...</p>
+    </article>
+    <article class="slide" id="slide-5">
+      <img src="pie.png"/>
+      <h1>Ahora una historia...</h1>
+    </article>
+    <article class="slide" id="slide-6"></article>
+    <article class="slide" id="slide-7"></article>
+    <article class="slide" id="slide-8"></article>
+    <article class="slide" id="slide-9">
+      <img src="telco1.jpg" id="t1"/>
+      <img src="telco2.jpg" id="t2"/>
+      <img src="telco3.jpg" id="t3"/>
+      <img src="telco4.jpg" id="t4"/>
+    </article>
+    <article class="slide" id="slide-10">
+      <h2>Caso de los programas de chat</h1>
+      <img src="tlogo-wa.png" height=400 width=400/>
+      <img src="tlogo-telegram.png" height=400 width=400/>
+      <img src="tlogo-signal.png" height=400 width=400/>
+    </article>
+    <article class="slide" id="slide-11">
+      <table>
+        <tr>
+          <th>Costo de servicios?
+            <th>Futuro?
+        <tr>
+          <td>Todos cuestan igual
+          <td>Próspero
+        <tr>
+          <td>Algunos son gratis <br/> las alternativas cuestan?
+          <td>Dominado por unos pocos
+      </table>
+    </article>
+    <article class="slide" id="slide-12">
+      <h1>Zero Rating</h1>
+    </article>
+    <article class="slide" id="slide-13">
+      <h1>Facebook Free Basics</h1>
+      <h3>India</h3>
+      <h2>Un poquito de Internet vs Nada de Internet?</h2>
+    </article>
+    <article class="slide" id="slide-14">
+      <h1>Neutralidad de la red</h1>
+    </article>
+    <article class="slide" id="slide-15">
+      <h1>Efectos secundarios</h1>
+      <ul>
+        <li>Confusión</li>
+        <li>Control de consumo de datos</li>
+        <li>Censura - Silos en Internet</li>
+      </ul>
+    </article>
+    <article class="slide" id="slide-16">
+      <h1>Otras modalidades</h1>
+      <ul>
+        <li>Uso de VPN
+          <li>Hardware no autorizado, Routers
+            <li>Bloqueo de servicios que compiten con el ISP
+              <li>Apple y AT&amp;T Bloqueando Skype (2009)
+    </article>
+    <article class="slide" id="slide-18">
+      <ul>
+        <li><a href="https://www.wired.com/story/guide-net-neutrality/">https://www.wired.com/story/guide-net-neutrality/</a></li>
+        <li><a href="https://mashable.com/2016/02/09/why-facebook-free-basics-failed-india/">https://mashable.com/2016/02/09/why-facebook-free-basics-failed-india/</a></li>
+        <li><a href="https://www.wired.com/2009/10/iphone-att-skype/">https://www.wired.com/2009/10/iphone-att-skype/</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Zero-rating">https://en.wikipedia.org/wiki/Zero-rating</a></li>
+        <li><a href="https://www.wired.com/story/covid-19-pandemic-shows-virtues-net-neutrality/">https://www.wired.com/story/covid-19-pandemic-shows-virtues-net-neutrality/</a></li>
+      </ul>
+    </article>
     </main>
   </body>
 <script>
