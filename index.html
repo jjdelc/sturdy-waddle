@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Neutralidad de la red</title>
+    <style media="screen">
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.slides {
+  display: flex;
+  flex-direction: column;
+}
+.slide {
+  height: 100vh;
+  posiition: relative;
+}
+    </style>
+  </head>
+  <body>
+    <main class="slides">
+    <article id="slide-1" class="slide">
+      <h1>Neutralidad de la red</<h1>
+    </article>
+      <article id="slide-2"class="slide">
+        <h1>https://www.isgeek.net</h1>
+      </article>
+      <article id="slide-3"class="slide">
+        <h1>Jjdelc</h1>
+      </article>
+      <article id="slide-4"class="slide">
+        <h1>Historia</h1>
+      </article>
+    </main>
+  </body>
+<script>
+let current = 1;
+const maxSlide = document.getElementsByClassName("slide").length + 1;
+function goToSlide(num) {
+  document.getElementById(`slide-${num}`).scrollIntoView();
+}
+window.addEventListener("keypress", (evt) => {
+  if (evt.charCode === 32) {
+    current += evt.shiftKey?-1:1;
+    current %= maxSlide;
+    current = current || 1;
+    goToSlide(current);
+    evt.stopPropagation();
+    evt.preventDefault();
+  }
+});
+</script>
+</html>
