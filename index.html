@@ -78,22 +78,22 @@ a {
       <h2>Y por qué es importante</h2>
     </article>
     <article id="slide-2"class="slide">
-      <h1>Soy Jj</h1>
+      <h1>Hola, soy Jj</h1>
       <h2><a href="https://www.isgeek.net">https://www.isgeek.net</a></h2>
     </article>
     <article id="slide-3"class="slide">
       <h1>Algunos escenarios</h1>
       <ul>
         <li>Correo postal</li>
-        <li>Viajes en avion</li>
+        <li>Viajes en avión</li>
       </ul>
     </article>
     <article id="slide-4"class="slide">
       <h1>Neutralidad en la red</h1>
-        <p>Se comenzó a ver en el control de P2P sharing.</p>
-        <p>Netflix, Youtube, Spotify<br/>Consumo de la capacidad de ancho de banda</p>
-        <p>Cableado priorizado por servicios: <br/>Telemedicina vs Cat videos</p>
-        <p>Potenciales cobros adicionales por consumo de Netflix, los ISPs dijeron que no lo harían</p>
+        <p>Control de P2P sharing.</p>
+        <p>Consumo de la capacidad de ancho de banda.</p>
+        <p>Cableado priorizado por servicios.</p>
+        <p>Potenciales cobros adicionales por consumo de servicios,<br/>Los ISPs dijeron que no lo harían.</p>
         <p>Pero el diablo es sabio...</p>
     </article>
     <article class="slide" id="slide-5">
@@ -111,9 +111,9 @@ a {
     </article>
     <article class="slide" id="slide-10">
       <h2>Caso de los programas de chat</h1>
-      <img src="tlogo-wa.png" height=400 width=400/>
       <img src="tlogo-telegram.png" height=400 width=400/>
       <img src="tlogo-signal.png" height=400 width=400/>
+      <img src="tlogo-wa.png" height=400 width=400/>
     </article>
     <article class="slide" id="slide-11">
       <table>
@@ -170,7 +170,10 @@ a {
 let current = 1;
 const maxSlide = document.getElementsByClassName("slide").length + 1;
 function goToSlide(num) {
-  document.getElementById(`slide-${num}`).scrollIntoView();
+  const elID = `slide-${num}`;
+  const el = document.getElementById(elID);
+  el.scrollIntoView();
+  window.history.pushState({}, "", "#" + elID);
 }
 window.addEventListener("keypress", (evt) => {
   if (evt.charCode === 32) {
